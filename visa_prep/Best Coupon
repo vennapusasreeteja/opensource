@@ -1,0 +1,5 @@
+X=int(input())
+dis_10_percentage = X - (0.01 * X)
+dis_100_percentage = X - 100
+final_amount = min(dis_10_percentage,dis_100_percentage)
+print(int(final_amount))
