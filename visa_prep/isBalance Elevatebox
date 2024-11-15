@@ -1,0 +1,15 @@
+def calculate_balance_array(N, A):
+    total_sum = sum(A) 
+    left_sum = 0  
+    B = []
+    for i in range(N):
+        right_sum = total_sum - left_sum - A[i] 
+        balance = abs(left_sum - right_sum)
+        B.append(balance)  
+        left_sum += A[i]
+    return B
+N = int(input())  
+A = list(map(int, input().split())) 
+B = calculate_balance_array(N, A)
+print(" ".join(map(str, B)))
+        
